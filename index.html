@@ -19,8 +19,8 @@
 
         .background-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: repeat(6, 1fr);
+            grid-auto-rows: 150px;
             gap: 5px;
             position: absolute;
             width: 100%;
@@ -32,20 +32,38 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            min-width: 100px;
-            min-height: 100px;
+        }
+
+        /* Define different image sizes */
+        .img1 {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .img2, .img3, .img4, .img5, .img6, .img7, .img8, .img9 {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+
+        .img10 {
+            grid-column: span 3;
+            grid-row: span 2;
         }
 
         h1 {
             font-size: 2.5em;
             margin-bottom: 20px;
             text-align: center;
+            position: relative;
+            z-index: 1;
         }
 
         .buttons {
             display: flex;
             gap: 10px;
             justify-content: center;
+            position: relative;
+            z-index: 1;
         }
 
         button {
@@ -78,22 +96,23 @@
 </head>
 <body>
     <div class="background-grid">
-        <img src="https://i.pinimg.com/736x/53/8c/c8/538cc879094ac3e4d41bb5f9fe4bfdb1.jpg" alt="Cozy Image 1">
-        <img src="https://i.pinimg.com/474x/e3/cf/ec/e3cfec5e17c6d9a9066e3d7f5d6d142.jpg" alt="Cozy Image 2">
-        <img src="https://i.pinimg.com/474x/2e/0d/f3/2e0df3c809cf53fbe46c62f420ff5858.jpg" alt="Cozy Image 3">
-        <img src="https://i.pinimg.com/474x/82/21/c3/8221c3a60195145366651ad6e71ed69e.jpg" alt="Cozy Image 4">
-        <img src="https://i.pinimg.com/474x/f9/04/07/f9040758614ccc4e9e86d0c05f5b414c.jpg" alt="Cozy Image 5">
-        <img src="https://i.pinimg.com/474x/d4/0a/23/d40a23ee1e54edecf437be9af0c94162.jpg" alt="Cozy Image 6">
-        <img src="https://i.pinimg.com/474x/20/99/68/209968c243ed0155796c3dead0281bfb.jpg" alt="Cozy Image 7">
-        <img src="https://i.pinimg.com/736x/cc/f6/8a/ccf68a85349faccee0ad6e3e2e797595.jpg" alt="Cozy Image 8">
-        <img src="https://i.pinimg.com/474x/09/b6/e0/09b6e01438092d95573567d2e622bbf2.jpg" alt="Cozy Image 9">
+        <img src="https://i.pinimg.com/736x/53/8c/c8/538cc879094ac3e4d41bb5f9fe4bfdb1.jpg" alt="Cozy Image 1" class="img1">
+        <img src="https://i.pinimg.com/474x/ba/0c/f5/ba0cf51887121b823e2126409c76cd3c.jpg" alt="Cozy Image 2" class="img2">
+        <img src="https://i.pinimg.com/474x/2e/0d/f3/2e0df3c809cf53fbe46c62f420ff5858.jpg" alt="Cozy Image 3" class="img3">
+        <img src="https://i.pinimg.com/474x/82/21/c3/8221c3a60195145366651ad6e71ed69e.jpg" alt="Cozy Image 4" class="img4">
+        <img src="https://i.pinimg.com/474x/f9/04/07/f9040758614ccc4e9e86d0c05f5b414c.jpg" alt="Cozy Image 5" class="img5">
+        <img src="https://i.pinimg.com/474x/d4/0a/23/d40a23ee1e54edecf437be9af0c94162.jpg" alt="Cozy Image 6" class="img6">
+        <img src="https://i.pinimg.com/474x/20/99/68/209968c243ed0155796c3dead0281bfb.jpg" alt="Cozy Image 7" class="img7">
+        <img src="https://i.pinimg.com/736x/cc/f6/8a/ccf68a85349faccee0ad6e3e2e797595.jpg" alt="Cozy Image 8" class="img8">
+        <img src="https://i.pinimg.com/474x/09/b6/e0/09b6e01438092d95573567d2e622bbf2.jpg" alt="Cozy Image 9" class="img9">
+        <img src="https://i.pinimg.com/736x/7a/87/95/7a8795e2cf6b097f8e9e34ad8be08bcb.jpg" alt="Cozy Image 10" class="img10">
     </div>
 
     <h1>Movie night tomorrow?</h1>
-   <div class="buttons">
-            <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
-            <button class="btn" id="noButton" onmouseover="moveButton()">No</button>
-        </div>
+    <div class="buttons">
+        <button class="yes-btn" onclick="location.href='yes.html'">Yes</button>
+        <button class="no-btn" onclick="location.href='no.html'">No</button>
+    </div>
 </body>
 </html>
 
